@@ -102,21 +102,15 @@
                                     make a difference.
                                 </p>
                                 <div class="row g-4 mb-4">
-                                    <div class="col-6">
-                                        <p><strong class="fw-bold text-dark">Phone :</strong> + 113-804-9098</p>
-                                        <p><strong class="fw-bold text-dark">skype :</strong> mezbah.wallas</p>
-                                        <p class="mb-0"><strong class="fw-bold text-dark">Address :</strong> 123 Street
-                                            New York</p>
-                                    </div>
-                                    <div class="col-6">
-                                        <p><strong class="fw-bold text-dark">Nationality :</strong> New York, USA</p>
-                                        <p><strong class="fw-bold text-dark">Email :</strong> contact@mezbah.com</p>
-                                        <p class="mb-0"><strong class="fw-bold text-dark">Freelancer :</strong>
-                                            Available</p>
+                                    <div class="col-7">
+                                        <p><strong class="fw-bold text-dark">Phone :</strong> +91 85112 33208</p>
+                                        <p><strong class="fw-bold text-dark">Email :</strong> vadaliyaparth001@gmail.com</p>
+                                        <p class="mb-0"><strong class="fw-bold text-dark">Address :</strong> Ahmedabad
+                                        </p>
                                     </div>
                                 </div>
-                                <a href="img/Parth_vadaliya_cv.pdf" class="btn btn-primary py-2 px-4" download>
-                                    <i class="fas fa-download me-2"></i>Download My CV
+                                <a href="img/Parth_vadaliya.pdf" class="btn btn-primary py-2 px-4" download>
+                                    <i class="fas fa-download me-2"></i>Download My Resume
                                 </a>
                             </div>
                         </div>
@@ -978,46 +972,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script>
-        let userName = prompt("Please enter your sweet name:");
-        // Step 2: Fetch the user's IP address and city using ipinfo.io API
-        fetch('https://ipinfo.io/json?token=17404629a5e844')  // Replace 'YOUR_IPINFO_TOKEN' with your ipinfo.io API token
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-                let userIp = data.ip;
-                let userCity = data.city;
-                let userRegion = data.region;
-                let userCountry = data.country;
-                let userinternet = data.org;
-                let usertimezone = data.timezone
-
-                if(!userName){
-                    userName = "Guest"
-                }
-
-                // Step 3: Send the data to your Telegram bot
-                let telegramBotToken = '8093988388:AAGiXPOYwZENzPUGnp3yaTZv9ItzxElXxCc'; // Replace with your bot token
-                let telegramChatId = '5041326188'; // Replace with your chat ID
-
-                let message = `Visitor: ${userName} \nVisitor IP: ${userIp}\nCity: ${userCity}\nState: ${userRegion}\nCountry: ${userCountry}\nTimezone: ${usertimezone}\n\nInternet Service: ${userinternet}`;
-
-                let telegramApiUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${telegramChatId}&text=${encodeURIComponent(message)}`;
-
-                // Send the request to Telegram API
-                fetch(telegramApiUrl)
-                    .then(response => response.json())
-                    .then(result => {
-                        console.log("Message sent successfully:", result);
-                    })
-                    .catch(error => {
-                        console.error("Error sending message:", error);
-                    });
-            })
-            .catch(error => {
-                console.error("Error fetching IP and location:", error);
-            });
-    </script>
 </body>
 
 </html>
